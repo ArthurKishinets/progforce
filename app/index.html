@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" ng-app="progforceApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="MainCtrl">
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">progforce</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#/">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="getwinner">
+    	<button type="button" class="btn btn-success" ng-click="getWinner()">Get winner</button>
+
+    	<p class="bg-success winner"></p>
+    </div>
+
+
+    <myform></myform>
+
+
+    <div class="mytable">
+      <table class="table table-bordered table-hover">
+      	<tr>
+        	<td>Name</td>
+        	<td>Surname</td>
+        	<td>Email</td>
+        	<td>Phone</td>
+        	<td>Birth</td>
+        </tr>
+        <tr ng-repeat="man in people">
+        	<td>{{man.name}}</td>
+        	<td>{{man.surname}}</td>
+        	<td>{{man.email}}</td>
+        	<td>{{man.phone}}</td>
+        	<td>{{man.birth}}</td>
+        </tr>
+      </table>
+    </div>
+
+    
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/directives/myform.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
